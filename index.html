@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="VALORANT (Cs3 Quarter 1 Project)" />
+    <meta name="keywords" content="HTML, CSS" />
+    <meta name="author" content="AM Dellosa" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <audio autoplay src="content/backgroundMusic.mp3"></audio>
+        <video class="backgroundVideo" width="2500" height="1406"autoplay loop muted>
+             <source src="content/backgroundVid.mp4" type="video/mp4">
+        </video>
+        <nav>
+            <ul>
+                <li class="right-border" id="nb5">Credits</li>
+                <li class="navButton" id="nb4">Buy VP</li>
+                <li class="navButton" id="nb3">Ranks</li>
+                <li class="navButton" id="nb2">About</li>
+                <li class="navButton" id="nb1">Home</li>
+            </ul>
+        </nav>
+        <img class="logo" src="https://miro.medium.com/v2/resize:fit:1400/1*FRx4ATg3ueUKCscNdHi6aA.png" alt="">
+        <h1 class="title">VALORANT</h1>
+    </body>
+    <style>
+        @import url(https://db.onlinewebfonts.com/c/e7322a6673613ab13604fadda3d20e56?family=VALORANT);
+        @font-face {
+            font-family: "VALORANT";
+            src: url("https://db.onlinewebfonts.com/t/e7322a6673613ab13604fadda3d20e56.eot");
+            src: url("https://db.onlinewebfonts.com/t/e7322a6673613ab13604fadda3d20e56.eot?#iefix")format("embedded-opentype"),
+            url("https://db.onlinewebfonts.com/t/e7322a6673613ab13604fadda3d20e56.woff2")format("woff2"),
+            url("https://db.onlinewebfonts.com/t/e7322a6673613ab13604fadda3d20e56.woff")format("woff"),
+            url("https://db.onlinewebfonts.com/t/e7322a6673613ab13604fadda3d20e56.ttf")format("truetype"),
+            url("https://db.onlinewebfonts.com/t/e7322a6673613ab13604fadda3d20e56.svg#VALORANT")format("svg");
+        }
+        *{
+            margin: 0;
+            overflow: hidden;
+        }
+        .navButton{
+            font-family: "VALORANT";
+            position: relative;
+            list-style-type:none;
+            float: right;
+            padding: 15px 10px 10px 10px;
+            border: 3px #53212B solid;
+            margin-top: 35px;
+            border-right: none;
+            font-size: 27px;
+            color:#181414;
+            background-color: #FD4556;
+        }
+        .right-border{
+            font-family: "VALORANT";
+            position: relative;
+            list-style-type:none;
+            float: right;
+            padding: 15px 10px 10px 10px;
+            border: 3px #53212B solid;
+            margin-top: 35px;
+            font-size: 27px;
+            color: #181414;
+            background-color: #FD4556;
+        }
+        .logo{
+            position: absolute;
+            height: 80px;
+            z-index: 2;
+            margin: 10px;
+        }
+        nav{
+            width: 100%;
+            position: fixed;
+            height: 98.3px;
+            background: #181414;
+            z-index: 1;
+        }
+        .title{
+            font-family: "VALORANT";
+            z-index: 2;
+            color: white;
+            font-size: 70px;
+            position: absolute;
+            margin: 17px 10px 10px 10px;
+            left: 100px;
+        }
+        .backgroundVideo{
+            position: absolute;
+            overflow: hidden;
+            float: right;
+            z-index: -1;
+            display: block;
+            bottom: -190px;
+            right: 0;
+        }
+    </style>
+</html>
