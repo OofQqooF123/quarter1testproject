@@ -10,7 +10,6 @@
     </head>
     <body>
         <div id="audio-container">
-            <button id="audio-button"></button>
             <audio loop id="audio" preload="auto">
                 <source src="content/backgroundMusic.mp3" type="audio/mpeg">
             </audio>
@@ -33,7 +32,7 @@
         <div class="mainText">
             <h1 class="gameName">VALORANT</h1> 
            <button class="gameInfo">
-               Game Info
+                <a href="about.html" id="about-link" style="color: white;">Game Info</a>
             </button>
        </div>
         <div>
@@ -123,7 +122,7 @@
             left: 5px;
             bottom: 10px;
             font-style: italic;
-            width: 80%;
+            width: 90%;
         }
         .backgroundVideo{
             position: fixed;
@@ -131,14 +130,13 @@
             float: right;
             z-index: -1;
             display: block;
-            bottom: -190px;
-            right: 0;
+            bottom: -35%;
         }
         .mainText{
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: center; 
             height: 100vh;
         }
         .gameName{
@@ -187,35 +185,18 @@
             cursor: pointer;
             transition: transform 0.2s;
         }
-        #audio-button.playing {
-            background-image: url('content/playing.png');
-            background-size: 70%;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        #audio-button:hover{
-            transform: scale(1.1);
-        }
     </style>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const audioButton = document.getElementById("audio-button");
-            const audio = document.getElementById("audio");
-
-            let isPlaying = false;
-
-            audioButton.addEventListener("click", function () {
-                if (isPlaying) {
-                    audio.pause();
-                    isPlaying = false;
-                    audioButton.classList.remove("playing");
-                } else {
-                    audio.play();
-                    isPlaying = true;
-                    audioButton.classList.add("playing");
-                }
-            });
-
+        const targetElement = document.getElementById("nb1");
+        targetElement.addEventListener("mousedown", function(event) {
+            event.preventDefault();
+            location.reload(true);
+        });
+        const targetElement2 = document.getElementById("nb2");
+        targetElement2.addEventListener("mousedown", function(event) {
+            event.preventDefault();
+            window.location.href = "about.html";
         });
     </script>
+    <script src="audio.js"></script>
 </html>
