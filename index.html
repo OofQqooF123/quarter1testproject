@@ -14,10 +14,8 @@
             <audio loop id="audio" preload="auto">
                 <source src="content/backgroundMusic.mp3" type="audio/mpeg">
             </audio>
+        
         </div>
-        <button class="gameInfo">
-            Game Info
-        </button>
         <video class="backgroundVideo" width="2500" height="1406" autoplay loop muted controls disablePictureInPicture controlsList="nodownload">
              <source src="content/backgroundVid.mp4" type="video/mp4">
         </video>
@@ -31,8 +29,13 @@
             </ul>
         </nav>
         <img class="logo" src="content/Radiant_Rank.png" alt="">
-        <h1 class="title">RIOT GAMES</h1>
-        <h1 class="gameName">VALORANT</h1> 
+        <h1 class="title">RIOT GAMES</h1> 
+        <div class="mainText">
+            <h1 class="gameName">VALORANT</h1> 
+           <button class="gameInfo">
+               Game Info
+            </button>
+       </div>
         <div>
             <h6 class="copyright">*This parody version of Riot Games' VALORANT website was created under Riot Games' "Legal Jibber Jabber" policy using assets owned by Riot Games.  Riot Games does not endorse or sponsor this project.</h6>
         </div>    
@@ -110,19 +113,6 @@
             margin: 17px 10px 10px 10px;
             left: 90px;
         }
-        .gameName{
-            font-family: "VALORANT";
-            z-index: 2;
-            color: white;
-            font-size: 100px;
-            position: fixed;
-            top: 35%;
-            left: 36.3%;
-            transition: transform 0.2s;
-        }
-        .gameName:hover{
-            transform: scale(1.2);
-        }
         .copyright{
             font-family: "Circular Std Book";
             z-index: 2;
@@ -133,6 +123,7 @@
             left: 5px;
             bottom: 10px;
             font-style: italic;
+            width: 80%;
         }
         .backgroundVideo{
             position: fixed;
@@ -142,6 +133,23 @@
             display: block;
             bottom: -190px;
             right: 0;
+        }
+        .mainText{
+            position: fixed;
+            top: 25%;
+            right: 29%;
+            text-align:center;
+            padding: 100px;
+        }
+        .gameName{
+            font-family: "VALORANT";
+            z-index: 2;
+            color: white;
+            font-size: 100px;
+            transition: transform 0.2s;
+        }
+        .gameName:hover{
+            transform: scale(1.2);
         }
         .gameInfo{
             font-family: "FSP DEMO - Anguita Sans Black";
@@ -153,9 +161,6 @@
             background-color: #ff4454;
             border: 4px #53212B solid;
             border-radius: 100px;
-            position: absolute;
-            bottom: 40%;
-            left: 43.5%;
             cursor: pointer;
             transition: transform 0.2s;
             transform-origin: center;
