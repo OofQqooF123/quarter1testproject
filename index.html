@@ -10,17 +10,20 @@
     </head>
     <body>
         <div id="audio-container">
-            <button id="audio-button"> </button>
+            <button id="audio-button"></button>
             <audio loop id="audio" preload="auto">
                 <source src="content/backgroundMusic.mp3" type="audio/mpeg">
             </audio>
         </div>
+        <button class="gameInfo">
+            Game Info
+        </button>
         <video class="backgroundVideo" width="2500" height="1406"autoplay loop muted>
              <source src="content/backgroundVid.mp4" type="video/mp4">
         </video>
         <nav>
             <ul>
-                <li class="right-border" id="nb5">Credits</li>
+                <li class="navButton" id="nb5">Credits</li>
                 <li class="navButton" id="nb4">Buy VP</li>
                 <li class="navButton" id="nb3">Ranks</li>
                 <li class="navButton" id="nb2">About</li>
@@ -28,10 +31,16 @@
             </ul>
         </nav>
         <img class="logo" src="content/Radiant_Rank.png" alt="">
-        <h1 class="title">VALORANT</h1>
+        <h1 class="title">RIOT GAMES</h1>
+        <h1 class="gameName">VALORANT</h1> 
+        <div>
+            <h6 class="copyright">*This parody version of Riot Games' VALORANT website was created under Riot Games' "Legal Jibber Jabber" policy using assets owned by Riot Games.  Riot Games does not endorse or sponsor this project.</h6>
+        </div>    
     </body>
     <style>
         @import url(https://db.onlinewebfonts.com/c/e7322a6673613ab13604fadda3d20e56?family=VALORANT);
+        @import url(https://db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+        @import url(https://db.onlinewebfonts.com/c/89d26504567ac6dbff4910a1bb5b8ba7?family=FSP+DEMO+-+Anguita+Sans+Black);
         @font-face {
             font-family: "VALORANT";
             src: url("https://db.onlinewebfonts.com/t/e7322a6673613ab13604fadda3d20e56.eot");
@@ -41,34 +50,44 @@
             url("https://db.onlinewebfonts.com/t/e7322a6673613ab13604fadda3d20e56.ttf")format("truetype"),
             url("https://db.onlinewebfonts.com/t/e7322a6673613ab13604fadda3d20e56.svg#VALORANT")format("svg");
         }
+        @font-face {
+            font-family: "Circular Std Book";
+            src: url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.eot");
+            src: url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.eot?#iefix")format("embedded-opentype"),
+            url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff2")format("woff2"),
+            url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff")format("woff"),
+            url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.ttf")format("truetype"),
+            url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.svg#Circular Std Book")format("svg");
+        }
+        @font-face {
+            font-family: "FSP DEMO - Anguita Sans Black";
+            src: url("https://db.onlinewebfonts.com/t/89d26504567ac6dbff4910a1bb5b8ba7.eot");
+            src: url("https://db.onlinewebfonts.com/t/89d26504567ac6dbff4910a1bb5b8ba7.eot?#iefix")format("embedded-opentype"),
+            url("https://db.onlinewebfonts.com/t/89d26504567ac6dbff4910a1bb5b8ba7.woff2")format("woff2"),
+            url("https://db.onlinewebfonts.com/t/89d26504567ac6dbff4910a1bb5b8ba7.woff")format("woff"),
+            url("https://db.onlinewebfonts.com/t/89d26504567ac6dbff4910a1bb5b8ba7.ttf")format("truetype"),
+            url("https://db.onlinewebfonts.com/t/89d26504567ac6dbff4910a1bb5b8ba7.svg#FSP DEMO - Anguita Sans Black")format("svg");
+        }
         *{
             margin: 0;
             overflow: hidden;
         }
+
         .navButton{
-            font-family: "VALORANT";
+            font-family: "FSP DEMO - Anguita Sans Black";
             position: relative;
             list-style-type:none;
             float: right;
-            padding: 15px 10px 10px 10px;
-            border: 3px #53212B solid;
-            margin-top: 35px;
+            margin: 30px 25px 10px 25px;
             border-right: none;
-            font-size: 27px;
-            color:#181414;
-            background-color: #FD4556;
+            font-size: 30px;
+            color:white;
+            text-decoration: underline;
+            cursor: pointer;
+            transition: transform 0.2s;
         }
-        .right-border{
-            font-family: "VALORANT";
-            position: relative;
-            list-style-type:none;
-            float: right;
-            padding: 15px 10px 10px 10px;
-            border: 3px #53212B solid;
-            margin-top: 35px;
-            font-size: 27px;
-            color: #181414;
-            background-color: #FD4556;
+        .navButton:hover{
+            transform: scale(1.2);
         }
         .logo{
             position: fixed;
@@ -79,18 +98,42 @@
         nav{
             width: 100%;
             position: fixed;
-            height: 98.3px;
+            height: 96px;
             background: #181414;
             z-index: 1;
         }
         .title{
+            font-family: "Circular Std Book";
+            z-index: 2;
+            color: white;
+            font-size: 50px;
+            position: fixed;
+            margin: 17px 10px 10px 10px;
+            left: 90px;
+        }
+        .gameName{
             font-family: "VALORANT";
             z-index: 2;
             color: white;
-            font-size: 70px;
+            font-size: 100px;
+            position: fixed;
+            top: 300px;
+            left: 36.3%;
+            transition: transform 0.2s;
+        }
+        .gameName:hover{
+            transform: scale(1.2);
+        }
+        .copyright{
+            font-family: "Circular Std Book";
+            z-index: 2;
+            color: white;
+            font-size: 15px;
             position: fixed;
             margin: 15px 10px 10px 10px;
-            left: 90px;
+            left: 5px;
+            bottom: 10px;
+            font-style: italic;
         }
         .backgroundVideo{
             position: fixed;
@@ -101,6 +144,26 @@
             bottom: -190px;
             right: 0;
         }
+        .gameInfo{
+            font-family: "FSP DEMO - Anguita Sans Black";
+            display: inline-block;
+            z-index: 2;
+            color: white;
+            font-size: 30px;
+            padding: 20px 80px 20px 80px;
+            background-color: #ff4454;
+            border: 4px #53212B solid;
+            border-radius: 100px;
+            position: absolute;
+            bottom: 400px;
+            left: 43.5%;
+            cursor: pointer;
+            transition: transform 0.2s;
+            transform-origin: center;
+        }
+        .gameInfo:hover{
+            transform: scale(1.1);
+        }
         #audio-button{
             position: fixed;
             float: right;
@@ -109,19 +172,24 @@
             width: 70px;
             height: 70px;
             z-index: 3;
-            border: 0px;
             border-radius: 50px;
             background-image: url('content/muted.png');
             background-size: 70%;
             background-repeat: no-repeat;
             background-position: center;
-            background-color: #FD4556;
+            background-color: #ff4454;
+            border: 4px #53212B solid;
+            cursor: pointer;
+            transition: transform 0.2s;
         }
         #audio-button.playing {
             background-image: url('content/playing.png');
             background-size: 70%;
             background-repeat: no-repeat;
             background-position: center;
+        }
+        #audio-button:hover{
+            transform: scale(1.1);
         }
     </style>
     <script>
