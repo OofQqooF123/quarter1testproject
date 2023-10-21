@@ -4,12 +4,12 @@
     <title>Home</title>
     <meta charset="UTF-8" />
     <meta name="description" content="VALORANT (Cs3 Quarter 1 Project)" />
-    <meta name="keywords" content="HTML, CSS" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
     <meta name="author" content="AM Dellosa" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
-        <audio autoplay src="content/backgroundMusic.mp3"></audio>
+        <audio id="myAudio" loop src="content/backgroundMusic.mp3"></audio>
         <video class="backgroundVideo" width="2500" height="1406"autoplay loop muted>
              <source src="content/backgroundVid.mp4" type="video/mp4">
         </video>
@@ -97,4 +97,10 @@
             right: 0;
         }
     </style>
+    <script>
+         var audio = document.getElementById("myAudio");
+            document.addEventListener("mousemove", function () {
+             audio.play();
+        });
+    </script>
 </html>
