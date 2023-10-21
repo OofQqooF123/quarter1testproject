@@ -23,3 +23,10 @@ document.addEventListener("mousemove", function () {
      }
 });
 
+document.addEventListener("mouseup", function () {
+    if (isFirstMouseUp) {
+        audio.play();
+        isFirstMouseUp = false;
+     }
+});
+
