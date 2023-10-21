@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="VALORANT (Cs3 Quarter 1 Project)" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="AM Dellosa" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <div id="audio-container">
+            <audio loop id="audio" preload="auto">
+                <source src="content/backgroundMusic.mp3" type="audio/mpeg">
+            </audio>
+        
+        </div>
+       <nav>
+           <ul>
+               <li class="navButton" id="nb5">Credits</li>
+               <li class="navButton" id="nb4">Buy VP</li>
+               <li class="navButton" id="nb3">Ranks</li>
+               <li class="navButton" id="nb2">
+                    <a href="javascript:location.reload(true)" style="color: white;">About</a>
+               </li>
+               <li class="navButton" id="nb1">
+                    <a href="index.html" id="about-link" style="color: white;">Home</a>
+               </li>
+           </ul>
+       </nav>
+       <img class="logo" src="content/Radiant_Rank.png" alt="">
+       <h1 class="title">RIOT GAMES</h1> 
+        <div>
+            <h6 class="copyright">*This parody version of Riot Games' VALORANT website was created under Riot Games' "Legal Jibber Jabber" policy using assets owned by Riot Games.  Riot Games does not endorse or sponsor this project.</h6>
+        </div>
+        <h1 class="head">WE ARE VALORANT</h1>   
+    </body>
+    <style>
+        @import url(https://db.onlinewebfonts.com/c/e7322a6673613ab13604fadda3d20e56?family=VALORANT);
+        @import url(https://db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+        @import url(https://db.onlinewebfonts.com/c/89d26504567ac6dbff4910a1bb5b8ba7?family=FSP+DEMO+-+Anguita+Sans+Black);
+        @font-face {
+            font-family: "VALORANT";
+            src: url("https://db.onlinewebfonts.com/t/e7322a6673613ab13604fadda3d20e56.eot");
+            src: url("https://db.onlinewebfonts.com/t/e7322a6673613ab13604fadda3d20e56.eot?#iefix")format("embedded-opentype"),
+            url("https://db.onlinewebfonts.com/t/e7322a6673613ab13604fadda3d20e56.woff2")format("woff2"),
+            url("https://db.onlinewebfonts.com/t/e7322a6673613ab13604fadda3d20e56.woff")format("woff"),
+            url("https://db.onlinewebfonts.com/t/e7322a6673613ab13604fadda3d20e56.ttf")format("truetype"),
+            url("https://db.onlinewebfonts.com/t/e7322a6673613ab13604fadda3d20e56.svg#VALORANT")format("svg");
+        }
+        @font-face {
+            font-family: "Circular Std Book";
+            src: url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.eot");
+            src: url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.eot?#iefix")format("embedded-opentype"),
+            url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff2")format("woff2"),
+            url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff")format("woff"),
+            url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.ttf")format("truetype"),
+            url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.svg#Circular Std Book")format("svg");
+        }
+        @font-face {
+            font-family: "FSP DEMO - Anguita Sans Black";
+            src: url("https://db.onlinewebfonts.com/t/89d26504567ac6dbff4910a1bb5b8ba7.eot");
+            src: url("https://db.onlinewebfonts.com/t/89d26504567ac6dbff4910a1bb5b8ba7.eot?#iefix")format("embedded-opentype"),
+            url("https://db.onlinewebfonts.com/t/89d26504567ac6dbff4910a1bb5b8ba7.woff2")format("woff2"),
+            url("https://db.onlinewebfonts.com/t/89d26504567ac6dbff4910a1bb5b8ba7.woff")format("woff"),
+            url("https://db.onlinewebfonts.com/t/89d26504567ac6dbff4910a1bb5b8ba7.ttf")format("truetype"),
+            url("https://db.onlinewebfonts.com/t/89d26504567ac6dbff4910a1bb5b8ba7.svg#FSP DEMO - Anguita Sans Black")format("svg");
+        }
+        *{
+            margin: 0;
+            overflow: hidden;
+        }
+        body{
+            background-color: #f0ece4;
+        }
+        .navButton{
+            font-family: "FSP DEMO - Anguita Sans Black";
+            position: relative;
+            list-style-type:none;
+            float: right;
+            margin: 30px 25px 10px 25px;
+            border-right: none;
+            font-size: 30px;
+            color:white;
+            text-decoration: underline;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .navButton:hover{
+            transform: scale(1.2);
+        }
+        .logo{
+            position: fixed;
+            height: 80px;
+            z-index: 2;
+            margin: 5px;
+        }
+        nav{
+            width: 100%;
+            position: fixed;
+            height: 96px;
+            background: #181414;
+            z-index: 1;
+        }
+        .title{
+            font-family: "Circular Std Book";
+            z-index: 2;
+            color: white;
+            font-size: 50px;
+            position: fixed;
+            margin: 17px 10px 10px 10px;
+            left: 90px;
+        }
+        .copyright{
+            font-family: "Circular Std Book";
+            z-index: 2;
+            color: black;
+            font-size: 15px;
+            position: fixed;
+            margin: 15px 10px 10px 10px;
+            left: 5px;
+            bottom: 10px;
+            font-style: italic;
+            width: 90%;
+        }
+    </style>
+    <script>
+        const targetElement = document.getElementById("nb1");
+        targetElement.addEventListener("mousedown", function(event) {
+            event.preventDefault();
+            window.location.href = "index.html";
+        });
+    </script>
+    <script src="audio.js"></script>
+</html>
