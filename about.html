@@ -9,6 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
+        <div class="jettclick">
+            <img src="content/jett.png" alt="jett" class="jettChar" id="playButton">
+            <audio id="audioPlayer" controls style="display: none;"></audio>
+            <br>
+            <br>
+            <button class="clickChar" id="buttonChar">Click the image!</button>
+        </div>
         <div id="audio-container">
             <audio loop id="audio" preload="auto">
                 <source src="content/backgroundMusic.mp3" type="audio/mpeg">
@@ -57,6 +64,8 @@
         @import url(https://db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
         @import url(https://db.onlinewebfonts.com/c/89d26504567ac6dbff4910a1bb5b8ba7?family=FSP+DEMO+-+Anguita+Sans+Black);
         @import url(https://db.onlinewebfonts.com/c/09ac81b561d9a4e2834c7bb4c669cb85?family=Co+Headline+W01+Regular);
+        @import url(https://db.onlinewebfonts.com/c/28d2e6758b7919e18e76b015bbda74cb?family=QuiettheThief-EmptyBold);
+        @import url(https://db.onlinewebfonts.com/c/7cc8cbbd7a330c0d1e7c08c6d62711e4?family=League+Spartan+Regular);
         @font-face {
             font-family: "VALORANT";
             src: url("https://db.onlinewebfonts.com/t/e7322a6673613ab13604fadda3d20e56.eot");
@@ -93,9 +102,27 @@
             url("https://db.onlinewebfonts.com/t/09ac81b561d9a4e2834c7bb4c669cb85.ttf")format("truetype"),
             url("https://db.onlinewebfonts.com/t/09ac81b561d9a4e2834c7bb4c669cb85.svg#Co Headline W01 Regular")format("svg");
         }
+        @font-face {
+            font-family: "QuiettheThief-EmptyBold";
+            src: url("https://db.onlinewebfonts.com/t/28d2e6758b7919e18e76b015bbda74cb.eot");
+            src: url("https://db.onlinewebfonts.com/t/28d2e6758b7919e18e76b015bbda74cb.eot?#iefix")format("embedded-opentype"),
+            url("https://db.onlinewebfonts.com/t/28d2e6758b7919e18e76b015bbda74cb.woff2")format("woff2"),
+            url("https://db.onlinewebfonts.com/t/28d2e6758b7919e18e76b015bbda74cb.woff")format("woff"),
+            url("https://db.onlinewebfonts.com/t/28d2e6758b7919e18e76b015bbda74cb.ttf")format("truetype"),
+            url("https://db.onlinewebfonts.com/t/28d2e6758b7919e18e76b015bbda74cb.svg#QuiettheThief-EmptyBold")format("svg");
+        }
+        @font-face {
+            font-family: "League Spartan Regular";
+            src: url("https://db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.eot");
+            src: url("https://db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.eot?#iefix")format("embedded-opentype"),
+            url("https://db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.woff2")format("woff2"),
+            url("https://db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.woff")format("woff"),
+            url("https://db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.ttf")format("truetype"),
+            url("https://db.onlinewebfonts.com/t/7cc8cbbd7a330c0d1e7c08c6d62711e4.svg#League Spartan Regular")format("svg");
+        }
         *{
             margin: 0;
-            overflow: hidden;
+            overflow: auto;
         }
         body{
             background-color: #f0ece4;
@@ -148,7 +175,7 @@
             left: 5px;
             bottom: 10px;
             font-style: italic;
-            width: 90%;
+            width: 50%;
         }
         .heading{
             width: 50%;
@@ -189,11 +216,9 @@
             margin-top: -1%;
             transition: transform 0.2s;
             }
-
             .animate-charcter:hover{
                 transform: scale(1.05);
             }
-
         @keyframes textclip {
             to {
                 background-position: 200% center;
@@ -205,13 +230,83 @@
             display: inline-block;
             z-index: 2;
             color: black;
-            font-size: 150%;
+            font-size: 125%;
             width: 50%;
+            height: 110%;
             text-align: justify;
             left: 5%;
-            top: 34%;
+            top: 32%;
+        }
+        .jettclick{
+            z-index: 10;
+            position: fixed;
+            left: 70%;
+            top: 17%;
+            overflow: hidden;
+        }
+        .jettChar{
+            transition: transform 0.2s;
+            width: 300px;
+            cursor: pointer;
+        }
+        .jettChar:hover{
+            transform: scale(1.05);
+        }
+        .clickChar{
+            position: fixed;
+            font-family: "League Spartan Regular";
+            display: inline-block;
+            z-index: 2;
+            color: white;
+            font-size: 20px;
+            padding: 20px 80px 20px 80px;
+            background-color: #ff4454;
+            border: 4px #53212B solid;
+            border-radius: 100px;
+            opacity: 1;
+            transition: opacity 1s;
+            left: 69.2%;
         }
     </style>
-    <script></script>
+    <script>
+        const playButton = document.getElementById('playButton');
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        const mp3List = [
+            'content/1.mp3',
+            'content/2.mp3',
+            'content/3.mp3',
+            'content/4.mp3',
+            'content/5.mp3',
+            'content/6.mp3',
+            'content/7.mp3',
+            'content/8.mp3',
+            'content/9.mp3',
+            'content/10.mp3',
+        ];
+
+        playButton.addEventListener('click', playRandomMP3);
+
+        function playRandomMP3() {
+            const randomIndex = Math.floor(Math.random() * mp3List.length);
+            const randomMP3 = mp3List[randomIndex];
+            audioPlayer.src = randomMP3;
+            audioPlayer.play();
+        }
+
+        audioPlayer.addEventListener('ended', () => {
+            audioPlayer.src = '';
+        }); 
+        const image = document.getElementById('buttonChar');
+        function toggleVisibility() {
+            if (image.style.opacity === '1') {
+                image.style.opacity = '0';
+            } else {
+            image.style.opacity = '1'; 
+            }
+        }
+        setInterval(toggleVisibility, 1000);
+    </script>
     <script src="audio.js"></script>
 </html>
+
