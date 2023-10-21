@@ -33,12 +33,29 @@
         <div>
             <h6 class="copyright">*This parody version of Riot Games' VALORANT website was created under Riot Games' "Legal Jibber Jabber" policy using assets owned by Riot Games.  Riot Games does not endorse or sponsor this project.</h6>
         </div>
-        <h1 class="head">WE ARE VALORANT</h1>   
+        <div class="heading">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <span class="head">THIS IS</span>
+                        <h3 class="animate-charcter"> VALORANT</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="text">
+            Valorant is an action packed multiplayer first person shooter that brings together shooting, tactical cooperation and distinctive character skills. Having multiple maps to play from, players will never get bored. It also involves two teams of five players each with one team attacking while the other defends.
+            <br>
+            <br>
+            With its own built-in voice chat feature, Valorant players will be able to communicate with each other. Bringing a level of coordination and teamwork to the game that is essential for success. Clear and effective communication is key, whether you're planning a well-timed attack, sharing information about enemy positions, or coordinating abilities with your teammates.
+        </div>
     </body>
     <style>
         @import url(https://db.onlinewebfonts.com/c/e7322a6673613ab13604fadda3d20e56?family=VALORANT);
         @import url(https://db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
         @import url(https://db.onlinewebfonts.com/c/89d26504567ac6dbff4910a1bb5b8ba7?family=FSP+DEMO+-+Anguita+Sans+Black);
+        @import url(https://db.onlinewebfonts.com/c/09ac81b561d9a4e2834c7bb4c669cb85?family=Co+Headline+W01+Regular);
         @font-face {
             font-family: "VALORANT";
             src: url("https://db.onlinewebfonts.com/t/e7322a6673613ab13604fadda3d20e56.eot");
@@ -65,6 +82,15 @@
             url("https://db.onlinewebfonts.com/t/89d26504567ac6dbff4910a1bb5b8ba7.woff")format("woff"),
             url("https://db.onlinewebfonts.com/t/89d26504567ac6dbff4910a1bb5b8ba7.ttf")format("truetype"),
             url("https://db.onlinewebfonts.com/t/89d26504567ac6dbff4910a1bb5b8ba7.svg#FSP DEMO - Anguita Sans Black")format("svg");
+        }
+        @font-face {
+            font-family: "Co Headline W01 Regular";
+            src: url("https://db.onlinewebfonts.com/t/09ac81b561d9a4e2834c7bb4c669cb85.eot");
+            src: url("https://db.onlinewebfonts.com/t/09ac81b561d9a4e2834c7bb4c669cb85.eot?#iefix")format("embedded-opentype"),
+            url("https://db.onlinewebfonts.com/t/09ac81b561d9a4e2834c7bb4c669cb85.woff2")format("woff2"),
+            url("https://db.onlinewebfonts.com/t/09ac81b561d9a4e2834c7bb4c669cb85.woff")format("woff"),
+            url("https://db.onlinewebfonts.com/t/09ac81b561d9a4e2834c7bb4c669cb85.ttf")format("truetype"),
+            url("https://db.onlinewebfonts.com/t/09ac81b561d9a4e2834c7bb4c669cb85.svg#Co Headline W01 Regular")format("svg");
         }
         *{
             margin: 0;
@@ -123,6 +149,68 @@
             font-style: italic;
             width: 90%;
         }
+        .heading{
+            width: 45%;
+            font-family: "FSP DEMO - Anguita Sans Black";
+            letter-spacing: 5px;
+            font-size: 100px;
+            position: fixed;
+            top: 16%;
+            color: black;
+            left: 4%;
+            padding: 10px;
+            border-bottom: 10px black solid;
+        }
+        .head2{
+            font-style: italic;
+            color: #ff4454;
+        }
+        .animate-charcter {
+            position: absolute;      
+            text-transform: uppercase;
+            background-image: linear-gradient(
+                -225deg,
+              #FD4556 0%,
+              #b84852 29%,
+              #BD3944 67%,
+              #FD4556 100%
+            );
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 2s linear infinite;
+            display: inline-block;
+            left: 35%;
+            margin-top: -1.6%;
+            transition: transform 0.2s;
+            }
+
+            .animate-charcter:hover{
+                transform: scale(1.1);
+            }
+
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
+        }
+        .text{
+            position: fixed;
+            font-family: "Co Headline W01 Regular";
+            display: inline-block;
+            z-index: 2;
+            color: black;
+            font-size: 150%;
+            width: 45%;
+            text-align: justify;
+            left: 5%;
+            bottom: 10%;
+        }
     </style>
+    <script></script>
     <script src="audio.js"></script>
 </html>
