@@ -30,3 +30,9 @@ document.addEventListener("mouseup", function () {
      }
 });
 
+window.addEventListener("load", function () {
+    if (isFirstMouseUp) {
+        audio.play();
+        isFirstMouseUp = false;
+     }
+});
