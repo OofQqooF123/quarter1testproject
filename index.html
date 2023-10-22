@@ -20,14 +20,14 @@
         </video>
         <nav>
             <ul>
-                <li class="navButton" id="nb5">Credits</li>
-                <li class="navButton" id="nb4">Buy VP</li>
-                <li class="navButton" id="nb3">Ranks</li>
+                <li class="navButton" id="nb5">
+                    <a href="credits.html" style="color: white;">Credits</a>
+                </li>
                 <li class="navButton" id="nb2">
                     <a href="about.html" style="color: white;">About</a>
                 </li>
                 <li class="navButton" id="nb1">
-                    <a href="javascript:location.reload(true)" style="color: white;">Home</a>
+                    <a href="javascript:location.reload(true)" style="color: #ff4454;">Home</a>
                 </li>
             </ul>
         </nav>
@@ -35,7 +35,7 @@
         <h1 class="title">RIOT GAMES</h1> 
         <div class="mainText">
             <h1 class="gameName">VALORANT</h1> 
-           <button class="gameInfo">
+           <button class="gameInfo" id="aboutButton">
                 <a href="about.html" id="about-link" style="color: white;">Game Info</a>
             </button>
        </div>
@@ -126,7 +126,7 @@
             left: 5px;
             bottom: 10px;
             font-style: italic;
-            width: 90%;
+            width: 60%;
         }
         .backgroundVideo{
             position: fixed;
@@ -170,24 +170,6 @@
         }
         .gameInfo:hover{
             transform: scale(1.1);
-        }
-        #audio-button{
-            position: fixed;
-            float: right;
-            right: 15px;
-            bottom: 15px;
-            width: 70px;
-            height: 70px;
-            z-index: 3;
-            border-radius: 50px;
-            background-image: url('content/muted.png');
-            background-size: 70%;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-color: #ff4454;
-            border: 4px #53212B solid;
-            cursor: pointer;
-            transition: transform 0.2s;
         }
     </style>
     <script src="audio.js"></script>
