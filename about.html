@@ -9,8 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
+        <img id="image-to-duplicate" src="content/jettChibi.png" alt="">
         <div class="jettclick">
-            <img src="content/jett.png" alt="jett" class="jettChar" id="playButton">
+            <img src="content/jett.png" alt="" class="jettChar" id="playButton">
             <audio id="audioPlayer" controls style="display: none;"></audio>
             <br>
             <br>
@@ -20,23 +21,25 @@
             <audio loop id="audio" preload="auto">
                 <source src="content/backgroundMusic.mp3" type="audio/mpeg">
             </audio>
-        
         </div>
-       <nav>
+        <video class="backgroundVideo" width="2500" height="1406" autoplay loop muted controls disablePictureInPicture controlsList="nodownload">
+            <source src="content/backgroundVid.mp4" type="video/mp4">
+        </video>
+        <nav>
            <ul>
-               <li class="navButton" id="nb5">Credits</li>
-               <li class="navButton" id="nb4">Buy VP</li>
-               <li class="navButton" id="nb3">Ranks</li>
-               <li class="navButton" id="nb2">
-                    <a href="javascript:location.reload(true)" style="color: white;">About</a>
-               </li>
-               <li class="navButton" id="nb1">
+                <li class="navButton" id="nb5">
+                    <a href="credits.html" style="color: white;">Credits</a>
+                </li>
+                <li class="navButton" id="nb2">
+                    <a class="aboutButton" href="javascript:location.reload(true)" style="color: #ff4454;">About</a>
+                </li>
+                <li class="navButton" id="nb1">
                     <a href="index.html" id="about-link" style="color: white;">Home</a>
-               </li>
-           </ul>
-       </nav>
-       <img class="logo" src="content/Radiant_Rank.png" alt="">
-       <h1 class="title">RIOT GAMES</h1> 
+                </li>
+            </ul>
+        </nav>
+        <img class="logo" src="content/Radiant_Rank.png" alt="">
+        <h1 class="title">RIOT GAMES</h1> 
         <div>
             <h6 class="copyright">*This parody version of Riot Games' VALORANT website was created under Riot Games' "Legal Jibber Jabber" policy using assets owned by Riot Games.  Riot Games does not endorse or sponsor this project.</h6>
         </div>
@@ -52,12 +55,13 @@
                 </div>
             </div>
             <div class="text">
-                Valorant is an action packed multiplayer first person shooter that brings together shooting, tactical cooperation and distinctive character skills. Having multiple maps to play from, players will never get bored. It also involves two teams of five players each with one team attacking while the other defends.
+                <span style="font-style: italic;">Valorant </span> is an action packed multiplayer first person shooter that brings together shooting, tactical cooperation and distinctive character skills. Having multiple maps to play from, players will never get bored. It also involves two teams of five players each with one team attacking while the other defends.
                 <br>
                 <br>
                 With its own built-in voice chat feature, Valorant players will be able to communicate with each other. Bringing a level of coordination and teamwork  to the game that is essential for success. Clear and effective communication is key, whether you're planning a well-timed attack, sharing information about enemy positions, or coordinating abilities with your teammates.
             </div>
         </div>
+        <div class="mainContent"></div>
     </body>
     <style>
         @import url(https://db.onlinewebfonts.com/c/e7322a6673613ab13604fadda3d20e56?family=VALORANT);
@@ -122,10 +126,15 @@
         }
         *{
             margin: 0;
-            overflow: auto;
+            overflow: hidden;
         }
-        body{
-            background-color: #f0ece4;
+        .backgroundVideo{
+            position: fixed;
+            overflow: hidden;
+            float: right;
+            z-index: -1;
+            display: block;
+            bottom: -35%;
         }
         .navButton{
             font-family: "FSP DEMO - Anguita Sans Black";
@@ -168,26 +177,27 @@
         .copyright{
             font-family: "Circular Std Book";
             z-index: 2;
-            color: black;
+            color: white;
             font-size: 15px;
             position: fixed;
             margin: 15px 10px 10px 10px;
             left: 5px;
             bottom: 10px;
             font-style: italic;
-            width: 50%;
+            width: 60%;
         }
         .heading{
             width: 50%;
-            font-family: "FSP DEMO - Anguita Sans Black";
-            letter-spacing: 15px;
-            font-size: 80px;
+            font-family: "League Spartan Regular";
+            letter-spacing: 5px;
+            font-size: 50px;
             position: fixed;
-            top: 16%;
-            color: black;
+            top: 18%;
+            color: white;
             left: 4%;
             padding: 10px;
             border-bottom: 10px black solid;
+            word-spacing: 10px;
         }
         .head2{
             font-style: italic;
@@ -212,8 +222,8 @@
             -webkit-text-fill-color: transparent;
             animation: textclip 2s linear infinite;
             display: inline-block;
-            left: 40%;
-            margin-top: -1%;
+            margin-top: -0.75%;
+            margin-left: 4%;
             transition: transform 0.2s;
             }
             .animate-charcter:hover{
@@ -229,7 +239,7 @@
             font-family: "Co Headline W01 Regular";
             display: inline-block;
             z-index: 2;
-            color: black;
+            color: white;
             font-size: 125%;
             width: 50%;
             height: 110%;
@@ -267,8 +277,65 @@
             transition: opacity 1s;
             left: 69.2%;
         }
+        .mainContent{
+            margin-left: 3%;
+            margin-right: 10px;
+            margin-top: 8%;
+            overflow: auto;
+            border: 3px solid black;
+            background-color: #424141;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; 
+            height: 70vh;
+            width: 110vh;
+            font-family: "Eina03-SemiBold";
+            border-radius: 25px;
+            box-sizing: border-box;
+        }
+        .falling-image {
+            position: absolute;
+            animation: fall 5s linear;
+        }
+        #image-to-duplicate {
+            display: none;
+        }
+        .falling-image {
+            position: absolute;
+            z-index: 10;
+            animation: fall 5s linear;
+        }
+        @keyframes fall {
+            from {
+                transform: translateY(0) rotate(0deg);
+            }
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
     </style>
     <script>
+        const buttonImage = document.getElementById("playButton");
+
+        buttonImage.addEventListener("click", function () {
+            const duplicateImage = document.createElement("img");
+            duplicateImage.src = "content/jettChibi.png"; 
+            duplicateImage.className = "falling-image";
+
+            duplicateImage.style.left = `${Math.random() * window.innerWidth}px`;
+            duplicateImage.style.top = '0';
+
+            const randomRotation = Math.random() * 360;
+            const randomTransform = `translateY(0) rotate(${randomRotation}deg)`;
+            duplicateImage.style.transform = randomTransform;
+
+            document.body.appendChild(duplicateImage);
+
+            duplicateImage.addEventListener("animationend", function () {
+                document.body.removeChild(duplicateImage);
+            });
+        });
         const playButton = document.getElementById('playButton');
         const audioPlayer = document.getElementById('audioPlayer');
 
@@ -309,4 +376,3 @@
     </script>
     <script src="audio.js"></script>
 </html>
-
