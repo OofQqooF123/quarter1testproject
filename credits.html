@@ -34,21 +34,33 @@
        <h1 class="title">RIOT GAMES</h1> 
         <div class="mainContent">
             <p class="mainText">This parody version of Riot Games' VALORANT website was created under Riot Games' "Legal Jibber Jabber" policy using assets owned by Riot Games. Riot Games does not endorse or sponsor this project.</p>
-            <span class="mainText">Riot Games:<a class="mainText" href="https://www.riotgames.com/en">https://www.riotgames.com/en</a></span>
-            <span class="mainText">Jett Icon:<a class="mainText" href="https://www.pinterest.ph/pin/592293788512907047/">https://www.pinterest.ph/pin/592293788512907047/</a></span>
+            <p class="mainText">Links/Sources:</p>
+            <div class="sources">
+                <a class="mainText" id="links" href="https://www.riotgames.com/en" style="color: #ff4454;">RIOT GAMES</a>
+                <a class="mainText" id="links" href="https://www.pinterest.ph/pin/592293788512907047/" style="color: #47a8ed;">Jett Icon</a>
+                <a class="mainText" id="links" href="https://www.pngwing.com/en/free-png-amgjd" style="color: #2074f4;">Facebook Logo</a>
+                <a class="mainText" id="links" href="https://www.pngwing.com/en/free-png-bbtjg" style="color: #20a4f4;">Old Twitter Logo</a>
+                <a class="mainText" id="links" href="https://www.pngwing.com/en/free-png-anyln" style="color:#ff4404;">Reddit Logo</a>
+            </div>
         </div>
         <div class="socials">
             <h1 id="socialsText">My Socials</h1>
+            <br>
             <div class="mySocialsImgs">
-                <a href="discordapp.com/users/869545288635920404">
-                    <img src="content/facebook.png" style="width: 100px; margin: 15px;">
+                <a href="https://web.facebook.com/profile.php?id=100093186671241">
+                    <img src="content/facebook.png" class="imgs">
+                </a>
+                <br>
+                <a href="https://twitter.com/mikquackquack">
+                    <img src="content/twitter.png" class="imgs">
+                </a>
+                <br>
+                <a href="https://www.reddit.com/user/Mikoconut">
+                    <img src="content/reddit.png" class="imgs">
                 </a>
             </div>
-            <h1 id="socialsText">Riot Games</h1>
-            <div class="riotGamesImgs">
-
-            </div>
         </div>
+        
     </body>
     <style>
         @import url(https://db.onlinewebfonts.com/c/e7322a6673613ab13604fadda3d20e56?family=VALORANT);
@@ -163,6 +175,7 @@
             position: fixed;
             margin: 17px 10px 10px 10px;
             left: 90px;
+            cursor: default;
         }
         .mainText{
             font-family: "Co Headline W01 Regular";
@@ -199,7 +212,7 @@
         .socials{
             position: fixed;
             right: 17%;
-            top: 22.5%;
+            top: 20.5%;
             font-size: 35px;
         }
         #socialsText{
@@ -208,6 +221,24 @@
             text-align: center;
             word-spacing: 3px;
             letter-spacing: 2px;
+            cursor: default;
+        }
+        .imgs{
+            width: 100px;
+            margin: 15px;
+            border-radius: 50%;
+            position: relative;
+            transition: transform 0.2s;
+        }
+        .mySocialsImgs{
+            position: relative;
+            right: -24%;
+        }
+        .imgs:hover{
+            transform: scale(1.2);
+        }
+        #links{
+            margin-top: 0px;
         }
     </style>
     <script src="audio.js"></script>
