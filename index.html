@@ -35,9 +35,11 @@
         <h1 class="title">RIOT GAMES</h1> 
         <div class="mainText">
             <h1 class="gameName">VALORANT</h1> 
-           <button class="gameInfo" id="aboutButton">
-                <a href="about.html" id="about-link" style="color: white;">Game Info</a>
-            </button>
+            <a href="about.html" id="about-link" style="color: white;" class="gameInfo">
+                <button class="gameInfo2" id="redirectButton">
+                Game Info
+                </button>
+            </a>
        </div>
         <div>
             <h6 class="copyright">*This parody version of Riot Games' VALORANT website was created under Riot Games' "Legal Jibber Jabber" policy using assets owned by Riot Games.  Riot Games does not endorse or sponsor this project.</h6>
@@ -168,12 +170,22 @@
             transform-origin: center;
             text-decoration: underline;
         }
+        .gameInfo2{
+            color: white;
+            font-size: 30px;
+            font-family: "FSP DEMO - Anguita Sans Black";
+            z-index: 2;
+            background-color: #ff4454;
+            border: none;
+            cursor: pointer;
+        }
         .gameInfo:hover{
             transform: scale(1.1);
         }
     </style>
     <script src="audio.js"></script>
     <script>
+        
         let isFirstMouseUp = true;
         document.addEventListener("DOMContentLoaded", function () {
         var audio = document.getElementById("audio");
